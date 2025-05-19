@@ -23,34 +23,34 @@ import {
   Box,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import img from "./assets/Avatar.png";
+import img from "./assets/i.webp";
 
 export default function App() {
   const [users, setUsers] = useState([
     {
       id: "1",
-      name: "Stive Jobss",
-      email: "jackson.graham@example.com",
-      phone: "88880090",
-      country: "Dushanbe",
-      completed: true,
+      name: "Parviz",
+      email: "parviz@gmail.com",
+      phone: "04040404",
+      country: "USA",
+      completed: false,
       photo: img,
     },
     {
       id: "2",
-      name: "Elena Moarz",
+      name: "Mia Khalifa",
       email: "elena@example.com",
-      phone: "88880091",
-      country: "Dushanbe",
+      phone: "09098976",
+      country: "USA",
       completed: true,
       photo: img,
     },
     {
       id: "3",
-      name: "Steve Jobs",
-      email: "steve@example.com",
-      phone: "88880092",
-      country: "Khujand",
+      name: "Shuhrat",
+      email: "shuhrat@gmail.com",
+      phone: "9980898",
+      country: "Pamir",
       completed: false,
       photo: img,
     },
@@ -62,7 +62,7 @@ export default function App() {
   const [open, setOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
 
-  const cities = ["All", "Dushanbe", "Khujand", "Bokhtar", "Hisar", "Kulob"];
+  const cities = ["All", "USA", "Pamir", "DuBAi", "Brasil", "Canada"];
 
   const handleDelete = (id) => {
     setUsers(users.filter((el) => el.id !== id));
@@ -125,9 +125,9 @@ export default function App() {
   });
 
   return (
-    <Container maxWidth="md" sx={{ mt: 5 }}>
+    <Container maxWidth="md" sx={{ mt: 6 }}>
       <Stack direction="row" justifyContent="space-between" alignItems="center">
-        <Typography variant="h4">Экзамин Синхронно</Typography>
+        <Typography variant="h4">Todo List</Typography>
         <Button variant="contained" onClick={handleAdd}>
           Add User
         </Button>
@@ -145,7 +145,7 @@ export default function App() {
           select
           value={statusFilter}
           onChange={(e) => setStatusFilter(e.target.value)}
-          sx={{ minWidth: 120 }}
+          sx={{ minWidth: 180 }}
         >
           <MenuItem value="All">All</MenuItem>
           <MenuItem value="Active">Active</MenuItem>
